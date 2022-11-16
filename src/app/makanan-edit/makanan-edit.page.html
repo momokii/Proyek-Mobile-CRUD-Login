@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Edit Makanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-list lines = 'full'>
+
+    <ion-item>
+      <ion-input required [(ngModel)]= "id_makanan" placeholder="Nama Makanan" type="hidden"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nama Makanan</ion-label>
+      <ion-input required [(ngModel)]= "nama_makanan" placeholder="Nama Makanan" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Harga</ion-label>
+      <ion-input required [(ngModel)]= "harga" placeholder="Nama" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Kategori</ion-label>
+      <ion-input required [(ngModel)]= "id_kategori" placeholder="Nama Makanan" type="text"></ion-input>
+    </ion-item>
+
+    <ion-row>
+
+      <ion-col>
+        <ion-button type="button" (click)="editMakanan()" color="primary" shape="full" expand = 'block'>
+          Edit Makanan
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-list>
+
+
+</ion-content>
